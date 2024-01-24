@@ -1,4 +1,4 @@
-import React ,{lazy , useState,useEffect}from 'react';
+import React, { lazy, useState, useEffect, Suspense } from 'react';
 import {createRoot} from 'react-dom/client';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header';
@@ -7,14 +7,15 @@ import About from './components/About';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import { createBrowserRouter, RouterProvider , Outlet} from "react-router-dom";
-import { Suspense } from 'react';
 import Shimmer from './components/Shimmer';
 import userContext from './utils/userContext';
 import {Provider} from "react-redux";
 import AppStore from './utils/AppStore';
 import Cart from './components/Cart';
 
+
 const Contact = lazy(() => import('./components/Contact'))
+
 
 
 const AppLayout = () => {
